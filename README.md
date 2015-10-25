@@ -6,8 +6,18 @@ Alkalmazások fejlesztése 1. Beadandó
 A követelmény feltárás során felmérik és összegyűjtik a megrendelt szoftverrel szemben támasztott felhasználói követelményeket, elemzik az alkalmazási szakterületet. Részei:
 
 1. Követelmények összegyűjtése: a nyújtandó szolgáltatások ismertetése rövid, szöveges leírásként, sokszor felsorolásként jelenik meg.
- * Funkcionális elvárások
+ * Funkcionális elvárások:
+    * lehessen új csapatot létrehozni
+    * lehessen csapattagokat hozzáadni meglévő csapathoz
+    * lehessen hitelesített felhasználónak meglévő csapatot törölni
+    * lehessen hitelesített felhasználónak meglévő csapatból csapattagot törölni
+    * lehessen hitelesített felhasználónak meglévő csapatot szerkeszteni
+    * lehessen hitelesített felhasználónak meglévő csapatból csapattagot szerkeszteni
+    * lehessen listázni a meglévő csapatokat
  * Nem funkcionális követelmények
+    * tartalmazzon két modellt, egy-sok kapcsolatban
+    * perzisztálás fájlba történjen
+    * közzététel Herokun
 2. Szakterületi fogalomjegyzék: ha vannak speciális fogalmak, akkor ezeket itt lehet összegyűjteni és magyarázni.
 3. Használatieset-modell
   * Szerepkörök: lista rövid leírással
