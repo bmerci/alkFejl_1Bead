@@ -1,0 +1,8 @@
+[<actor>AnonymUser]<:-[<actor>User]
+[<actor>AnonymUser] - [<usecase>csapatok listázása]
+[<actor>AnonymUser] - [<usecase>új csapat létrehozása]
+[<actor>AnonymUser] - [<usecase>új csapattag hozzáadása]
+[<actor>User] - [<usecase>csapat törlése]
+[<actor>User] - [<usecase>csapat szerkesztése]
+[<actor>User] - [<usecase>csapattag szerkesztése]
+[<actor>User] - [<usecase>csapattag törlése]
