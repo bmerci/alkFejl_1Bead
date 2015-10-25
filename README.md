@@ -18,9 +18,13 @@ A követelmény feltárás során felmérik és összegyűjtik a megrendelt szof
     * tartalmazzon két modellt, egy-sok kapcsolatban
     * perzisztálás fájlba történjen
     * közzététel Herokun
-2. Szakterületi fogalomjegyzék: ha vannak speciális fogalmak, akkor ezeket itt lehet összegyűjteni és magyarázni.
+2. Szakterületi fogalomjegyzék: 
+    * Csapat: egy vagy több tagból áll és névvel rendelkezik
+    * Csapattag: névvel rendelkezik
 3. Használatieset-modell
-  * Szerepkörök: lista rövid leírással
+  * Szerepkörök: 
+    * anonym user, minden user aki még nem autentikálta magát
+    * autentikált user, aki már regisztrált és autentikálta magát
   * Használati eset diagramok: a szerepkörök és az elérhető funkiók kapcsolatát jelenítik meg, ha kell, akkor esetenként rövid magyarázó szöveggel.
   * Folyamatok pontos menete: legalább 1 folyamat kifejtése.
 
