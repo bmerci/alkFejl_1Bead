@@ -1,0 +1,2 @@
+# alkFejl_1Bead
+TournamentGroupManager
