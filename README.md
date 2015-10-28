@@ -27,7 +27,7 @@ A követelmény feltárás során felmérik és összegyűjtik a megrendelt szof
     * autentikált user, aki már regisztrált és autentikálta magát
   * Használati eset diagramok:
   * ![use case diagram](images/usecasediagram.png)
-  * Folyamatok pontos menete: legalább 1 folyamat kifejtése.
+  * Egy folyamat pontos menete:
     * csapat szerkesztése
     * lépések
       1. a bejelentkezett felhasználó kilistázza a csapatokat
