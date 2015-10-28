@@ -25,8 +25,19 @@ A követelmény feltárás során felmérik és összegyűjtik a megrendelt szof
   * Szerepkörök: 
     * anonym user, minden user aki még nem autentikálta magát
     * autentikált user, aki már regisztrált és autentikálta magát
-  * Használati eset diagramok: a szerepkörök és az elérhető funkiók kapcsolatát jelenítik meg, ha kell, akkor esetenként rövid magyarázó szöveggel.
+  * Használati eset diagramok:
+  * ![use case diagram](images/usecasediagram.png)
   * Folyamatok pontos menete: legalább 1 folyamat kifejtése.
+    * csapat szerkesztése
+    * lépések
+      1. a bejelentkezett felhasználó kilistázza a csapatokat
+      2. kiválasztja a csapatot szerkesztésre
+      3. a rendszer megjeleníti a csapat szerkesztőfelületét
+      4. módosíthatja a csapat nevét
+      5. törölhet csapattagot
+      6. szerkeszthet csapattagot
+      7. a felhasználó megnyomja a mentés gombot
+      8. a rendszer elmenti a változtatásokat
 
 ## Tervezés
 
