@@ -41,18 +41,52 @@ A követelmény feltárás során felmérik és összegyűjtik a megrendelt szof
 
 ## Tervezés
 
-1. Architektúra terv
+### 1. Architektúra terv
+
   * komponensdiagram
-  * Oldaltérkép
-  * Végpontok
-2. Felhasználóifelület-modell
+
+#### Oldaltérkép
+
+Anonym user
+
+- Főoldal
+- Help
+- Login/Logout
+- Csapatok listája
+
+Autentikált user
+
+- Főoldal
+- Help
+- Login/Logout
+- Csapatok listája
+    + új csapat
+    + csapat szerkesztése
+      * csapattag hozzáadása
+      * csapattag törlése
+    + csapat törlése
+  
+#### Végpontok
+
+  * GET /: főoldal
+  * GET /help: leírás a használatról
+  * GET /login: bejelentkező oldal
+  * POST /login: bejelentkezési adatok felküldése
+  * GET /groups/list: csapatok listája
+  * GET /groups/new: új csapat felvitele oldal
+  * POST /groups/new: új csapat felvitele, adatok küldése
+  * GET /groups/:id: csapat adatai
+  * POST /groups/:id/edit: csapat szerkesztése
+  * DELETE /groups/:id: csapat törlése
+
+### 2. Felhasználóifelület-modell
   * Oldalvázlatok
   * Designterv (nem kell, elég a végső megvalósítás kinézete)
-3. Osztálymodell
+### 3. Osztálymodell
   * Adatmodell
   * Adatbázisterv
   * Állapotdiagram
-4. Dinamikus működés
+### 4. Dinamikus működés
   * Szekvenciadiagram
 
 ## Implementáció
