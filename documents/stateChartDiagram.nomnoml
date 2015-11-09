@@ -1,0 +1,3 @@
+[<state> új]->[<state> 1 csapattag van]
+[<state> új]->[<state> 2 csapattag van]
+[<state> 1 csapattag van]<->[<state> 2 csapattag van]
