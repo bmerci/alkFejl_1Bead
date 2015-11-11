@@ -81,17 +81,24 @@ Autentikált user
 
 ### 2. Felhasználóifelület-modell
   * Oldalvázlatok
+  * ![site Mockup](images/Mockup.jpg)
   * Designterv (nem kell, elég a végső megvalósítás kinézete)
+
 ### 3. Osztálymodell
   * Adatmodell
+  * ![data model](images/dataModel.png)
   * Adatbázisterv
+  * ![data model](images/dataModel.png)
   * Állapotdiagram
+  * ![state chart diagram](images/stateChartDiagram.png)
+
 ### 4. Dinamikus működés
   * Szekvenciadiagram
 
 ## Implementáció
 
 1. Fejlesztői környezet bemutatása
+  * Cloud9, Github
 2. Könyvtárstruktúrában lévő mappák funkiójának bemutatása
 
 ## Tesztelés
