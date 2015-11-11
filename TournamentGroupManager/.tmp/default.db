@@ -78,6 +78,17 @@
         "createdAt": "2015-11-11T19:52:10.453Z",
         "updatedAt": "2015-11-11T19:52:10.453Z",
         "id": 3
+      },
+      {
+        "surname": "Ves",
+        "forename": "Ves",
+        "username": "ves",
+        "password": "$2a$10$TM4gG1h0eWPyT9y6Ga9nAeMMVnWGgoOMI6OoMqA9q8mY.TET36rOe",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-11-11T21:39:47.735Z",
+        "updatedAt": "2015-11-11T21:39:47.735Z",
+        "id": 4
       }
     ]
   },
@@ -149,7 +160,7 @@
       }
     },
     "user": {
-      "neptun": {
+      "username": {
         "type": "string",
         "unique": true
       },
@@ -192,7 +203,7 @@
       "id": 3
     },
     "user": {
-      "id": 3
+      "id": 4
     },
     "group": {
       "id": 1

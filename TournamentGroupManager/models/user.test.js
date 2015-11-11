@@ -4,7 +4,7 @@ var bcrypt = require("bcryptjs");
 var Waterline = require('waterline');
 var waterlineConfig = require('../config/waterline');
 var userCollection = require('./user');
-var errorCollection = require('./error');
+var errorCollection = require('./group');
 
 var User;
 
@@ -27,7 +27,7 @@ describe('UserModel', function () {
 
     function getUserData() {
         return {
-                neptun: 'abcdef',
+                username: 'abcdef',
                 password: 'jelszo',
                 surname: 'Gipsz',
                 forename: 'Jakab',
@@ -44,7 +44,7 @@ describe('UserModel', function () {
     it('should be able to create a user', function () {
         return User.create(getUserData())
         .then(function (user) {
-            expect(user.neptun).to.equal('abcdef');
+            expect(user.username).to.equal('abcdef');
             expect(bcrypt.compareSync('jelszo', user.password)).to.be.true;
             expect(user.surname).to.equal('Gipsz');
             expect(user.forename).to.equal('Jakab');
@@ -55,10 +55,10 @@ describe('UserModel', function () {
     it('should be able to find a user', function() {
         return User.create(getUserData())
         .then(function(user) {
-            return User.findOneByNeptun(user.neptun);
+            return User.findOneByUsername(user.username);
         })
         .then(function (user) {
-            expect(user.neptun).to.equal('abcdef');
+            expect(user.username).to.equal('abcdef');
             expect(bcrypt.compareSync('jelszo', user.password)).to.be.true;
             expect(user.surname).to.equal('Gipsz');
             expect(user.forename).to.equal('Jakab');
