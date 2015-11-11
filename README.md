@@ -47,14 +47,13 @@ A követelmény feltárás során felmérik és összegyűjtik a megrendelt szof
 
 #### Oldaltérkép
 
-Anonym user
+##### Anonym user
 
 - Főoldal
 - Help
 - Login/Logout
-- Csapatok listája
 
-Autentikált user
+##### Autentikált user
 
 - Főoldal
 - Help
