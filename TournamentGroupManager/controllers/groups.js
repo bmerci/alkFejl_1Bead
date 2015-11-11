@@ -17,21 +17,21 @@ var statusClasses = {
     'rejected': 'default',
     'pending': 'warning',
 };
-function decorateErrors(errorContainer) {
-    return errorContainer.map(function (e) {
-        e.statusText = statusTexts[e.status];
-        e.statusClass = statusClasses[e.status];
+function decorateGroups(groupContainer) {
+    return groupContainer.map(function (e) {
+        //e.statusText = statusTexts[e.status];
+        //e.statusClass = statusClasses[e.status];
         return e;
     });
 }
 
 router.get('/list', function (req, res) {
-    req.app.models.group.find().then(function (errors) {
-        console.log(errors);
+    req.app.models.group.find().then(function (groups) {
+        console.log(groups);
 
         //megjelenítés
         res.render('groups/list', {
-            errors: decorateErrors(errors),
+            groups: decorateGroups(groups),
             messages: req.flash('info')
         });
     });
@@ -47,9 +47,9 @@ router.get('/new', function (req, res) {
 });
 router.post('/new', function (req, res) {
     // adatok ellenőrzése
-    req.checkBody('helyszin', 'Hibás helyszín').notEmpty().withMessage('Kötelező megadni!');
-    req.sanitizeBody('leiras').escape();
-    req.checkBody('leiras', 'Hibás leírás').notEmpty().withMessage('Kötelező megadni!');
+    req.checkBody('csapatNev', 'Hibás csapatnév').notEmpty().withMessage('Kötelező megadni!');
+    req.checkBody('elsoJatekosNeve', 'Hibás játékos név').notEmpty().withMessage('Kötelező megadni!');
+    req.checkBody('masodikJatekosNeve', 'Hibás játékos név').notEmpty().withMessage('Kötelező megadni!');
     
     var validationErrors = req.validationErrors(true);
     console.log(validationErrors);
@@ -64,13 +64,13 @@ router.post('/new', function (req, res) {
     else {
         // adatok elmentése (ld. később) és a hibalista megjelenítése
         req.app.models.group.create({
-            status: 'new',
-            location: req.body.helyszin,
-            description: req.body.leiras
+            name: req.body.csapatNev,
+            firstMemberName: req.body.elsoJatekosNeve,
+            secondMemberName: req.body.masodikJatekosNeve
         })
         .then(function (error) {
             //siker
-            req.flash('info', 'Hibajegy sikeresen felvéve!');
+            req.flash('info', 'Csoport sikeresen felvéve!');
             res.redirect('/groups/list');
         })
         .catch(function (err) {

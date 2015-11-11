@@ -2,21 +2,20 @@ module.exports = {
     identity: 'group',
     connection: 'default',
     attributes: {
-        date: {
-            type: 'datetime',
-            defaultsTo: function () { return new Date(); },
+        id: {
+            type: 'integer',
+            defaultsTo: 0,
             required: true,
         },
-        status: {
-            type: 'string',
-            enum: ['new', 'assigned', 'success', 'rejected', 'pending'],
-            required: true,
-        },
-        location: {
+        name: {
             type: 'string',
             required: true,
         },
-        description: {
+        firstMemberName: {
+            type: 'string',
+            required: true,
+        },
+        secondMemberName: {
             type: 'string',
             required: true,
         },

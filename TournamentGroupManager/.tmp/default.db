@@ -38,6 +38,22 @@
         "createdAt": "2015-11-11T19:56:58.552Z",
         "updatedAt": "2015-11-11T19:56:58.552Z",
         "id": 1
+      },
+      {
+        "name": "matka",
+        "firstMemberName": "kaluh",
+        "secondMemberName": "ves",
+        "id": 0,
+        "createdAt": "2015-11-11T20:48:28.764Z",
+        "updatedAt": "2015-11-11T20:48:28.764Z"
+      },
+      {
+        "name": "truitág pls",
+        "firstMemberName": "molpi",
+        "secondMemberName": "másikmolpi",
+        "id": 0,
+        "createdAt": "2015-11-11T20:59:45.236Z",
+        "updatedAt": "2015-11-11T20:59:45.236Z"
       }
     ],
     "user": [
@@ -106,23 +122,17 @@
       }
     },
     "group": {
-      "date": {
-        "type": "datetime"
+      "id": {
+        "type": "integer",
+        "defaultsTo": 0
       },
-      "status": {
-        "type": "string",
-        "enum": [
-          "new",
-          "assigned",
-          "success",
-          "rejected",
-          "pending"
-        ]
-      },
-      "location": {
+      "name": {
         "type": "string"
       },
-      "description": {
+      "firstMemberName": {
+        "type": "string"
+      },
+      "secondMemberName": {
         "type": "string"
       },
       "user": {
@@ -130,12 +140,6 @@
         "model": "user",
         "foreignKey": true,
         "alias": "user"
-      },
-      "id": {
-        "type": "integer",
-        "autoIncrement": true,
-        "primaryKey": true,
-        "unique": true
       },
       "createdAt": {
         "type": "datetime"

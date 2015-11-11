@@ -5,29 +5,41 @@
 <form class="form-horizontal" method="post">
     <fieldset>
         <div class="form-group
-            {{#if validationErrors.helyszin}}
+            {{#if validationErrors.csapatNev}}
                 has-error
             {{/if}}
         ">
-            <label for="helyszin" class="col-lg-2 control-label">Helyszín</label>
+            <label for="csapatNev" class="col-lg-2 control-label">Csapatnév</label>
             <div class="col-lg-10">
-                <input class="form-control" id="helyszin" name="helyszin" placeholder="pl. PC6, Lovarda, 2. emeleti folyosó..." type="text" value="{{data.helyszin}}">
-                {{#if validationErrors.helyszin}}
-                    <span class="help-block">{{validationErrors.helyszin.msg}}</span>
+                <input class="form-control" id="csapatNev" name="csapatNev" placeholder="KIL da nubz" type="text" value="{{data.csapatNev}}">
+                {{#if validationErrors.csapatNev}}
+                    <span class="help-block">{{validationErrors.csapatNev.msg}}</span>
                 {{/if}}
             </div>
         </div>
         <div class="form-group
-            {{#if validationErrors.leiras}}
+            {{#if validationErrors.elsoJatekosNeve}}
                 has-error
             {{/if}}
         ">
-            <label for="leiras" class="col-lg-2 control-label">Leírás</label>
+            <label for="elsoJatekosNeve" class="col-lg-2 control-label">Első játékos</label>
             <div class="col-lg-10">
-                <textarea class="form-control" rows="3" id="leiras" name="leiras">{{data.leiras}}</textarea>
-                <span class="help-block">Meg kell adni a helyszínt, ha pedig konkrét géppel van probléma, akkor azt is.</span>
-                {{#if validationErrors.leiras}}
-                    <span class="help-block">{{validationErrors.leiras.msg}}</span>
+                <input class="form-control" id="elsoJatekosNeve" name="elsoJatekosNeve" placeholder="Jóska" type="text" value="{{data.elsoJatekosNeve}}">
+                {{#if validationErrors.elsoJatekosNeve}}
+                    <span class="help-block">{{validationErrors.elsoJatekosNeve.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group
+            {{#if validationErrors.masodikJatekosNeve}}
+                has-error
+            {{/if}}
+        ">
+            <label for="masodikJatekosNeve" class="col-lg-2 control-label">Második játékos</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="masodikJatekosNeve" name="masodikJatekosNeve" placeholder="Pista" type="text" value="{{data.masodikJatekosNeve}}">
+                {{#if validationErrors.masodikJatekosNeve}}
+                    <span class="help-block">{{validationErrors.masodikJatekosNeve.msg}}</span>
                 {{/if}}
             </div>
         </div>
