@@ -6,11 +6,11 @@ var flash = require('connect-flash');
 
 var Waterline = require('waterline');
 var waterlineConfig = require('./config/waterline');
-var errorCollection = require('./models/error');
+var groupCollection = require('./models/group');
 var userCollection = require('./models/user');
 
 var indexRouter = require('./controllers/index');
-var errorRouter = require('./controllers/errors');
+var groupsRouter = require('./controllers/groups');
 var loginRouter = require('./controllers/login');
 
 var passport = require('passport');
@@ -112,7 +112,7 @@ app.use(setLocalsForLayout());
 //endpoint
 app.use('/', indexRouter);
 //app.use('/errors', errorRouter);
-app.use('/errors', ensureAuthenticated, errorRouter);
+app.use('/groups', ensureAuthenticated, groupsRouter);
 app.use('/login', loginRouter);
 
 app.get('/operator', ensureAuthenticated, andRestrictTo('operator'), function(req, res) {
@@ -128,7 +128,7 @@ app.get('/logout', function(req, res) {
 
 // ORM példány
 var orm = new Waterline();
-orm.loadCollection(Waterline.Collection.extend(errorCollection));
+orm.loadCollection(Waterline.Collection.extend(groupCollection));
 orm.loadCollection(Waterline.Collection.extend(userCollection));
 
 // ORM indítása

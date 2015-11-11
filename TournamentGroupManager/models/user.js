@@ -33,7 +33,7 @@ module.exports = {
         },
         
         errors: {
-            collection: 'error',
+            collection: 'group',
             via: 'user'
         },
         
