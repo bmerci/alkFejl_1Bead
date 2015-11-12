@@ -2,11 +2,11 @@ module.exports = {
     identity: 'group',
     connection: 'default',
     attributes: {
-        id: {
+        /*id: {
             type: 'integer',
             defaultsTo: 0,
             required: true,
-        },
+        },*/
         name: {
             type: 'string',
             required: true,

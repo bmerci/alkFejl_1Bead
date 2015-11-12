@@ -79,5 +79,16 @@ router.post('/new', function (req, res) {
         });
     }
 });
+router.get('/delete/:id', function(req, res) {
+    var id = req.params.id;
+    req.app.models.group.destroy({id: id})
+        .then(function (deletedGroups) {
+            res.format({
+                'text/html': function() {
+                    res.redirect('/groups/list');
+                }
+            });
+        });
+});
 
 module.exports = router;
