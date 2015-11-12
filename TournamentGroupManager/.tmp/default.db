@@ -29,7 +29,24 @@
         "id": 3
       }
     ],
-    "group": [],
+    "group": [
+      {
+        "name": "asd",
+        "firstMemberName": "molpiiii11123",
+        "secondMemberName": "másikmolpi",
+        "createdAt": "2015-11-12T21:16:42.352Z",
+        "updatedAt": "2015-11-12T22:11:50.381Z",
+        "id": 4
+      },
+      {
+        "name": "asd",
+        "firstMemberName": "asd",
+        "secondMemberName": "asd",
+        "createdAt": "2015-11-12T22:15:00.471Z",
+        "updatedAt": "2015-11-12T22:15:00.471Z",
+        "id": 6
+      }
+    ],
     "user": [
       {
         "surname": "Horváth",
@@ -182,7 +199,7 @@
       "id": 4
     },
     "group": {
-      "id": 3
+      "id": 6
     }
   }
 }

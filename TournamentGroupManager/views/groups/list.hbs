@@ -24,6 +24,7 @@
             {{!--<td><span class="label label-{{statusClass}}">{{statusText}}</span></td>--}}
             <td>{{firstMemberName}}</td>
             <td>{{secondMemberName}}</td>
+            <td><a class="btn btn-warning btn-sm szerkesztes-gomb" href="/groups/edit/{{id}}" role="button">Szerkesztés</a></td>
             <td><a class="btn btn-danger btn-sm torles-gomb" href="/groups/delete/{{id}}" role="button">Törlés</a></td>
         </tr>
         {{/each}}
