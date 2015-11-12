@@ -80,8 +80,12 @@ A követelmény feltárás során felmérik és összegyűjtik a megrendelt szof
 
 ### 2. Felhasználóifelület-modell
   * Oldalvázlatok
-  * ![site Mockup](images/Mockup.jpg)
-  * Designterv (nem kell, elég a végső megvalósítás kinézete)
+    * ![site Mockup](images/Mockup.jpg)
+  * Designterv
+    * ![login screen](images/loginScreen.png)
+    * ![new group screen](images/newScreen.png)
+    * ![group list screen](images/groupListScreen.png)
+    * ![edit group screen](images/editScreen.PNG)
 
 ### 3. Osztálymodell
   * Adatmodell
@@ -98,21 +102,53 @@ A követelmény feltárás során felmérik és összegyűjtik a megrendelt szof
 
 1. Fejlesztői környezet bemutatása
   * Cloud9, Github
-2. Könyvtárstruktúrában lévő mappák funkiójának bemutatása
+2. Könyvtárstruktúra
+  * `config` - _ORM_ konfiguráció
+  * `controllers` - controller réteg kódja, router-ek
+  * `documents` - _nomnoml_ diagrammok forráskódja
+  * `images` - dokumentációban használt képek
+  * `models` - üzleti modellek _ORM_ specifikációja
+  * `public` - kliensoldali _js_ és _css_
+  * `views` - nézetek _handlebars_ sablonjai
 
 ## Tesztelés
 
-Automatikus tesztek szükségesek. Nem kell teljeskörű tesztelés, a hallgató mutassa meg, hogy képes ilyen tesztek írására.
+### Tesztelési környezet
 
-1. Tesztelési környezet bemutatása
-2. Egységtesztek: legalább 1 adatmodell tesztelése
-3. Funkcionális felületi tesztek: legalább 1 folyamat tesztelése
-    1. VAGY: Selenium IDE használatával
-    2. VAGY: zombie.js használatával
-4. Tesztesetek felsorolása: milyen eseteket próbált végig a hallgató
+Az egységtesztelés _cloud9_ és _mocha_, a web-tesztelés _Selenium_ segítségével történt.
+
+A _Selenium_ teszteset a `loginAndList_testcase.html` fájlban található.
+
+### Tesztesetek
+
+#### Új csapat felvitele
+
+index / bejelentkezés : ves, asd / submit / új csapat felvitele : név, 1, 2 / submit / kilépés
+
+#### Bejelentkezés megszakítása
+
+index / bejelentkezés : ves / cancel
+
+#### Regisztráció
+
+index / bejelentkezés / regisztráció : géza, jános, gj, asd / submit
 
 ## Felhasználói dokumentáció
 
-1. A futtatáshoz ajánlott hardver-, szoftver konfiguráció
-2. Telepítés lépései: hogyan kerül a Githubról a célgépre a program
-3. A program használata
+### A futtatáshoz ajánlott konfiguráció
+
+* hardver: 200 MB memória, 250 MB merevlemez
+* szoftver: _heroku_
+
+### Telepítés lépései
+
+A következő lépéseket _Cloud9_ parancssorában kell kiadni. Feltételezzük, hogy a kód már git-tel verziózva van.
+
+1. `heroku create <alkalmazás neve> --region eu`
+2. `git push heroku master`
+
+Az alkalmazás a `<alkalmazás neve>.herokuapp.com` címen érhető el.
+
+### A program használata
+
+Regisztráció és belépés után két fős csapatokat lehet létrehozni, módosítani, törölni, és listázni.
