@@ -85,7 +85,7 @@ A követelmény feltárás során felmérik és összegyűjtik a megrendelt szof
     * ![login screen](images/loginScreen.png)
     * ![new group screen](images/newScreen.png)
     * ![group list screen](images/groupListScreen.png)
-    * ![edit group screen](images/editScreen.PNG)
+    * ![edit group screen](images/editScreen.png)
 
 ### 3. Osztálymodell
   * Adatmodell
